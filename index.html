@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر مقراني - أزياء بتقنية الذكاء الاصطناعي</title>
+    <title>مقراني - للأزياء والملابس</title>
     <style>
+        /* أساسيات بشرية - بسيطة ونظيفة */
         :root {
-            --primary: #2C5530;
-            --secondary: #D4AF37;
-            --accent: #8B4513;
+            --primary: #2C5530;   /* أخضر غامق أنيق */
+            --secondary: #D4AF37;  /* ذهبي */
+            --accent: #8B4513;     /* بني خشبي */
             --light: #F8F8F8;
             --dark: #2C2C2C;
-            --text: #333333;
         }
         
         * {
@@ -23,20 +23,20 @@
         
         body {
             background: var(--light);
-            color: var(--text);
+            color: var(--dark);
             line-height: 1.6;
         }
         
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* الهيدر المتطور */
+        /* هيدر بسيط وأنيق */
         .header {
             background: white;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
             top: 0;
@@ -51,19 +51,15 @@
         }
 
         .logo {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
-            align-items: center;
+            gap: 2rem;
         }
 
         .nav-links a {
@@ -71,257 +67,70 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
-            position: relative;
         }
 
         .nav-links a:hover {
             color: var(--primary);
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-actions {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .icon-btn {
-            background: none;
-            border: none;
-            font-size: 1.3rem;
-            cursor: pointer;
-            color: var(--dark);
-            transition: color 0.3s;
-        }
-
-        .icon-btn:hover {
-            color: var(--primary);
-        }
-
-        /* الهيرو */
+        /* هيرو بسيط */
         .hero {
-            background: linear-gradient(135deg, var(--primary), #4A7C59);
+            background: linear-gradient(135deg, var(--primary), #3A6B47);
             color: white;
-            padding: 180px 0 100px;
+            padding: 150px 0 80px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><path d="M0,70 Q250,30 500,70 T1000,70 L1000,100 L0,100 Z"/></svg>');
-            background-size: cover;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
+            font-size: 1.2rem;
             opacity: 0.9;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
         }
 
-        .btn {
-            background: var(--secondary);
-            color: var(--dark);
-            padding: 1.2rem 2.5rem;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
-        }
-
-        /* الفئات */
-        .categories {
+        /* قسم المنتجات - ملابس حقيقية */
+        .products {
             padding: 80px 0;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 3rem;
             color: var(--primary);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--secondary);
-        }
-
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .category-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-        }
-
-        .category-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .category-image {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-        }
-
-        .category-content {
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .category-content h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        /* المنتجات */
-        .products {
-            padding: 80px 0;
-            background: #f8f9fa;
         }
 
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
         .product-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
 
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--secondary);
-            color: var(--dark);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            z-index: 2;
+            transform: translateY(-5px);
         }
 
         .product-image {
             width: 100%;
-            height: 250px;
-            background: linear-gradient(45deg, #f5f5f5, #e8e8e8);
+            height: 300px;
+            background: #f8f8f8;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(44, 85, 48, 0.9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .product-card:hover .product-overlay {
-            opacity: 1;
-        }
-
-        .product-actions {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .action-btn {
-            background: white;
-            border: none;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: transform 0.3s;
-            font-size: 1.1rem;
-        }
-
-        .action-btn:hover {
-            transform: scale(1.1);
         }
 
         .product-content {
@@ -329,106 +138,55 @@
         }
 
         .product-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-bottom: 0.5rem;
             color: var(--dark);
         }
 
+        .product-description {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
         .product-price {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .current-price {
-            font-size: 1.3rem;
-            font-weight: 700;
+            font-size: 1.4rem;
+            font-weight: bold;
             color: var(--primary);
-        }
-
-        .original-price {
-            font-size: 1rem;
-            color: #999;
-            text-decoration: line-through;
-        }
-
-        .product-rating {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
             margin-bottom: 1rem;
         }
 
-        .star {
-            color: var(--secondary);
-        }
-
-        /* قسم الذكاء الاصطناعي */
-        .ai-section {
-            background: linear-gradient(135deg, var(--primary), #3A6B47);
+        .btn {
+            background: var(--primary);
             color: white;
-            padding: 100px 0;
-            text-align: center;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            transition: background 0.3s;
         }
 
-        .ai-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .ai-recommendation {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            padding: 3rem;
-            border-radius: 20px;
-            margin: 2rem auto;
-            border: 1px solid rgba(255,255,255,0.2);
+        .btn:hover {
+            background: var(--accent);
         }
 
         /* الفوتر */
         .footer {
             background: var(--dark);
             color: white;
-            padding: 60px 0 30px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-section h3 {
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--secondary);
-        }
-
-        .copyright {
+            padding: 3rem 0;
             text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #444;
-            color: #999;
+        }
+
+        .contact-info {
+            margin: 2rem 0;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+            color: #ccc;
         }
     </style>
 </head>
@@ -436,294 +194,146 @@
     <!-- الهيدر -->
     <header class="header">
         <div class="container nav-container">
-            <div class="logo">
-                <span>👑</span>
-                متجر مقراني
-            </div>
-            
+            <div class="logo">👑 مقراني</div>
             <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#categories">التصنيفات</a></li>
                 <li><a href="#products">المتجر</a></li>
-                <li><a href="#ai">المصمم الذكي</a></li>
                 <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
             </ul>
-            
-            <div class="nav-actions">
-                <button class="icon-btn">🔍</button>
-                <button class="icon-btn">❤️</button>
-                <button class="icon-btn">🛒</button>
-                <button class="icon-btn">👤</button>
-            </div>
         </div>
     </header>
 
     <!-- الهيرو -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>أزياء بتقنية الذكاء الاصطناعي</h1>
-            <p>اكتشف أحدث صيحات الموضة مع مصمم أزياء ذكي يختار لك أفضل الإطلالات</p>
-            <a href="#products" class="btn">تسوق الآن</a>
+            <h1>متجر مقراني للأزياء</h1>
+            <p>جودة عالية وأناقة لا تضاهى في كل قطعة ملابس</p>
         </div>
     </section>
 
-    <!-- التصنيفات -->
-    <section class="categories" id="categories">
-        <div class="container">
-            <h2 class="section-title">تصفح التصنيفات</h2>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-image">👕</div>
-                    <div class="category-content">
-                        <h3>ملابس رجالية</h3>
-                        <p>أحدث صيحات الموضة الرجالية</p>
-                    </div>
-                </div>
-                
-                <div class="category-card">
-                    <div class="category-image">👗</div>
-                    <div class="category-content">
-                        <h3>ملابس نسائية</h3>
-                        <p>تشكيلة مميزة من الأزياء النسائية</p>
-                    </div>
-                </div>
-                
-                <div class="category-card">
-                    <div class="category-image">👟</div>
-                    <div class="category-content">
-                        <h3>أحذية</h3>
-                        <p>أحذية تناسب جميع المناسبات</p>
-                    </div>
-                </div>
-                
-                <div class="category-card">
-                    <div class="category-image">🛍️</div>
-                    <div class="category-content">
-                        <h3>إكسسوارات</h3>
-                        <p>اكسسوارات تكمل إطلالتك</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- المنتجات -->
+    <!-- المنتجات - ملابس حقيقية -->
     <section class="products" id="products">
         <div class="container">
-            <h2 class="section-title">المنتجات الأكثر مبيعاً</h2>
+            <h2 class="section-title">تشكيلة الملابس</h2>
             <div class="products-grid">
-                <!-- منتج 1 -->
+                
+                <!-- منتج 1 - قميص رجالي -->
                 <div class="product-card">
-                    <div class="product-badge">🔥 الأكثر مبيعاً</div>
-                    <div class="product-image">
-                        <span>👕</span>
-                        <div class="product-overlay">
-                            <div class="product-actions">
-                                <button class="action-btn">❤️</button>
-                                <button class="action-btn">👁️</button>
-                                <button class="action-btn">🛒</button>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="product-image">👔</div>
                     <div class="product-content">
-                        <h3 class="product-title">قميص كاجوال قطني</h3>
-                        <div class="product-price">
-                            <span class="current-price">120 ر.س</span>
-                            <span class="original-price">150 ر.س</span>
-                        </div>
-                        <div class="product-rating">
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span>(128)</span>
-                        </div>
+                        <h3 class="product-title">قميص رجالي قطني</h3>
+                        <p class="product-description">قميص قطني عالي الجودة، مريح للارتداء اليومي والعمل</p>
+                        <div class="product-price">149 ر.س</div>
+                        <button class="btn">أضف إلى السلة</button>
                     </div>
                 </div>
 
-                <!-- منتج 2 -->
+                <!-- منتج 2 - جينز -->
                 <div class="product-card">
-                    <div class="product-badge">🆕 جديد</div>
-                    <div class="product-image">
-                        <span>👖</span>
-                        <div class="product-overlay">
-                            <div class="product-actions">
-                                <button class="action-btn">❤️</button>
-                                <button class="action-btn">👁️</button>
-                                <button class="action-btn">🛒</button>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="product-image">👖</div>
                     <div class="product-content">
-                        <h3 class="product-title">جينز ضيق عصري</h3>
-                        <div class="product-price">
-                            <span class="current-price">180 ر.س</span>
-                        </div>
-                        <div class="product-rating">
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span>(95)</span>
-                        </div>
+                        <h3 class="product-title">جينز ضيق</h3>
+                        <p class="product-description">جينز عصري بمقاسات متنوعة، يناسب جميع الأجسام</p>
+                        <div class="product-price">199 ر.س</div>
+                        <button class="btn">أضف إلى السلة</button>
                     </div>
                 </div>
 
-                <!-- منتج 3 -->
+                <!-- منتج 3 - فستان -->
                 <div class="product-card">
-                    <div class="product-image">
-                        <span>👗</span>
-                        <div class="product-overlay">
-                            <div class="product-actions">
-                                <button class="action-btn">❤️</button>
-                                <button class="action-btn">👁️</button>
-                                <button class="action-btn">🛒</button>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="product-image">👗</div>
                     <div class="product-content">
-                        <h3 class="product-title">فستان سهرة أنيق</h3>
-                        <div class="product-price">
-                            <span class="current-price">350 ر.س</span>
-                            <span class="original-price">400 ر.س</span>
-                        </div>
-                        <div class="product-rating">
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span>(67)</span>
-                        </div>
+                        <h3 class="product-title">فستان سهرة</h3>
+                        <p class="product-description">فستان أنيق للمناسبات الخاصة، بتصميم عصري وجذاب</p>
+                        <div class="product-price">349 ر.س</div>
+                        <button class="btn">أضف إلى السلة</button>
                     </div>
                 </div>
 
-                <!-- منتج 4 -->
+                <!-- منتج 4 - تيشيرت -->
                 <div class="product-card">
-                    <div class="product-badge">💫 مميز</div>
-                    <div class="product-image">
-                        <span>👟</span>
-                        <div class="product-overlay">
-                            <div class="product-actions">
-                                <button class="action-btn">❤️</button>
-                                <button class="action-btn">👁️</button>
-                                <button class="action-btn">🛒</button>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="product-image">👕</div>
                     <div class="product-content">
-                        <h3 class="product-title">حذاء رياضي مريح</h3>
-                        <div class="product-price">
-                            <span class="current-price">220 ر.س</span>
-                        </div>
-                        <div class="product-rating">
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span class="star">⭐</span>
-                            <span>(142)</span>
-                        </div>
+                        <h3 class="product-title">تيشيرت قطني</h3>
+                        <p class="product-description">تيشيرت مريح للارتداء اليومي، متوفر بعدة ألوان</p>
+                        <div class="product-price">79 ر.س</div>
+                        <button class="btn">أضف إلى السلة</button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- الذكاء الاصطناعي -->
-    <section class="ai-section" id="ai">
-        <div class="container ai-container">
-            <h2 class="section-title" style="color: white;">👑 مصمم الأزياء الذكي</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">دع الذكاء الاصطناعي يختار لك أفضل الإطلالات بناءً على ذوقك</p>
-            
-            <div class="ai-recommendation">
-                <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">🎯 الإطلالة الموصى بها لك</h3>
-                <p style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">👕 قميص كاجوال + 👖 جينز + 👟 حذاء رياضي</p>
-                <p style="margin-bottom: 2rem; opacity: 0.9;">للمقابلات الوظيفية - بناءً على أحدث صيحات الموضة</p>
-                <button class="btn" onclick="generateNewStyle()" style="background: var(--secondary); color: var(--dark);">🔄 اطلب إطلالة جديدة</button>
+                <!-- منتج 5 - بلوزة نسائية -->
+                <div class="product-card">
+                    <div class="product-image">🥻</div>
+                    <div class="product-content">
+                        <h3 class="product-title">بلوزة نسائية</h3>
+                        <p class="product-description">بلوزة أنيقة للعمل والمناسبات، بتصميم أنثوي رائع</p>
+                        <div class="product-price">129 ر.س</div>
+                        <button class="btn">أضف إلى السلة</button>
+                    </div>
+                </div>
+
+                <!-- منتج 6 - سترة -->
+                <div class="product-card">
+                    <div class="product-image">🧥</div>
+                    <div class="product-content">
+                        <h3 class="product-title">سترة شتوية</h3>
+                        <p class="product-description">سترة دافئة لموسم الشتاء، تحمي من البرد بأناقة</p>
+                        <div class="product-price">279 ر.س</div>
+                        <button class="btn">أضف إلى السلة</button>
+                    </div>
+                </div>
+
+                <!-- منتج 7 - تنورة -->
+                <div class="product-card">
+                    <div class="product-image">👚</div>
+                    <div class="product-content">
+                        <h3 class="product-title">تنورة قلم</h3>
+                        <p class="product-description">تنورة أنيقة للعمل والمناسبات، بطول مناسب</p>
+                        <div class="product-price">159 ر.س</div>
+                        <button class="btn">أضف إلى السلة</button>
+                    </div>
+                </div>
+
+                <!-- منتج 8 - بنطلون -->
+                <div class="product-card">
+                    <div class="product-image">👨‍💼</div>
+                    <div class="product-content">
+                        <h3 class="product-title">بنطلون رسمي</h3>
+                        <p class="product-description">بنطلون أنيق للمقابلات والعمل، بقصة مميزة</p>
+                        <div class="product-price">189 ر.س</div>
+                        <button class="btn">أضف إلى السلة</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- الفوتر -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>متجر مقراني</h3>
-                    <p>وجهتك الأولى للأزياء الذكية بتقنية الذكاء الاصطناعي</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>روابط سريعة</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#products">المتجر</a></li>
-                        <li><a href="#categories">التصنيفات</a></li>
-                        <li><a href="#ai">المصمم الذكي</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>خدمة العملاء</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">الشحن والتوصيل</a></li>
-                        <li><a href="#">الإرجاع والاستبدال</a></li>
-                        <li><a href="#">الأسئلة الشائعة</a></li>
-                        <li><a href="#">اتصل بنا</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>تابعنا</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">تويتر</a></li>
-                        <li><a href="#">انستغرام</a></li>
-                        <li><a href="#">سناب شات</a></li>
-                        <li><a href="#">تيك توك</a></li>
-                    </ul>
-                </div>
+            <h2>متجر مقراني</h2>
+            <p>لأجود أنواع الملابس والأزياء</p>
+            
+            <div class="contact-info">
+                <p>📍 الرياض، المملكة العربية السعودية</p>
+                <p>📞 0599999999</p>
+                <p>✉️ info@mokrani.com</p>
             </div>
             
-            <div class="copyright">
-                <p>© 2024 متجر مقراني. جميع الحقوق محفوظة.</p>
-            </div>
+            <p>© 2024 متجر مقراني. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
     <script>
-        // محاكاة الذكاء الاصطناعي
-        const styles = [
-            { outfit: "👕 قميص كاجوال + 👖 جينز + 👟 حذاء رياضي", occasion: "للمقابلات الوظيفية" },
-            { outfit: "👔 قميص رسمي + 👖 بنطلون جابرادين + 👞 حذاء جلد", occasion: "للمناسبات الرسمية" },
-            { outfit: "🎽 تيشيرت + 🩳 شورت + 🩴 شبشب", occasion: "للاسترخاء والرحلات" },
-            { outfit: "🧥 جاكت جلد + 👖 جينز + 👢 بوت", occasion: "للخروج في المساء" },
-            { outfit: "👗 فستان صيفي + 👒 قبعة + 👡 صندل", occasion: "للنزهات الصيفية" }
-        ];
-        
-        function generateNewStyle() {
-            const randomStyle = styles[Math.floor(Math.random() * styles.length)];
-            
-            document.querySelector('.ai-recommendation h3').textContent = "🎯 الإطلالة الموصى بها لك";
-            document.querySelector('.ai-recommendation p:nth-child(2)').textContent = randomStyle.outfit;
-            document.querySelector('.ai-recommendation p:nth-child(3)').textContent = `${randomStyle.occasion} - بناءً على أحدث صيحات الموضة`;
-        }
-
-        // تفاعل إضافة للسلة والمفضلة
-        document.querySelectorAll('.action-btn').forEach(button => {
+        // تفاعل بسيط لإضافة المنتجات للسلة
+        document.querySelectorAll('.btn').forEach(button => {
             button.addEventListener('click', function() {
-                const productCard = this.closest('.product-card');
-                const productName = productCard.querySelector('.product-title').textContent;
+                const productName = this.parentElement.querySelector('.product-title').textContent;
+                const productPrice = this.parentElement.querySelector('.product-price').textContent;
                 
-                if (this.textContent === '🛒') {
-                    alert(`🎉 تم إضافة ${productName} إلى سلة التسوق!`);
-                } else if (this.textContent === '❤️') {
-                    alert(`💖 تم إضافة ${productName} إلى المفضلة!`);
-                } else if (this.textContent === '👁️') {
-                    alert(`👀 عرض تفاصيل ${productName}`);
-                }
+                alert(`تم إضافة ${productName} إلى سلة التسوق\nالسعر: ${productPrice}`);
             });
         });
     </script>
